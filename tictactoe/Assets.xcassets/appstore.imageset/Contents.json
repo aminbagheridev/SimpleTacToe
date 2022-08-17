@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "NicePng_popeye-png_9400121.png",
+      "filename" : "appstore.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "NicePng_popeye-png_9400121-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "NicePng_popeye-png_9400121-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

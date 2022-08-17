@@ -19,17 +19,17 @@ extension SinglePlayerViewController: UIViewControllerTransitioningDelegate {
 extension SinglePlayerViewController: DifficultySelectionDelegate {
     
     // this function get's called whenever the switch is ressed in the overlay view controller due to us setting thw augnle player view controller as the intern or "self"
-    func didTapChoice(easySettings: Bool, image: UIImage) {
+    func didTapChoice(easySettings: Bool) {
         
         resetGame()
         availablePlays = [1,2,3,4,5,6,7,8,9]
         if easySettings == true {
             UserDefaults.standard.set(true, forKey: "hardMode")
             self.hardModeOn = UserDefaults.standard.bool(forKey: "hardMode")
-            imageView.image = image
+            
         } else {
             hardModeOn = false
-            imageView.image = UIImage(named: "happyPopeye")
+            
         }
         
         print("Hard Mode On: \(hardModeOn)")

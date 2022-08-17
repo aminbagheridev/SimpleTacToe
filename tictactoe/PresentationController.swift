@@ -29,9 +29,9 @@ class PresentationController: UIPresentationController {
     override var frameOfPresentedViewInContainerView: CGRect {
         // width equal to width of original frame
         // height is 0.6
-        CGRect(origin: CGPoint(x: 0, y: self.containerView!.frame.height * 0.4),
+        CGRect(origin: CGPoint(x: 0, y: self.containerView!.frame.height * 0.8),
                size: CGSize(width: self.containerView!.frame.width, height: self.containerView!.frame.height *
-                0.6))
+                0.2))
     }
 
     

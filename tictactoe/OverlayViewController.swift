@@ -10,7 +10,7 @@ import UIKit
 // CREATE PROTOCOL IN BOSS SCREEN (protocol is like a command list for intern)
 // creates a protocol that allows us to send in angry popeye image AND allows us to send the diffuclty setting (on and off state) of the switch to anny clas that adopts this protocol
 protocol DifficultySelectionDelegate {
-    func didTapChoice(easySettings: Bool, image: UIImage)
+    func didTapChoice(easySettings: Bool)
 }
 
 // creates an instance of the protocol
@@ -29,7 +29,7 @@ class OverlayViewController: UIViewController {
         
         
         //using the delegate function
-         selectionDelegate.didTapChoice(easySettings: UserDefaults.standard.bool(forKey: "toggleState"), image: UIImage(named: "angryPopeye")!)
+         selectionDelegate.didTapChoice(easySettings: UserDefaults.standard.bool(forKey: "toggleState"))
          
         
         // setting the value for the "toggleState" key in UserDefaults. if sender is on, the bool value is true, and if the sender (the switch) is off, the value is false.
@@ -84,7 +84,7 @@ class OverlayViewController: UIViewController {
         if sender.state == .ended {
             // gets the velocity of the gesture
             let dragVelocity = sender.velocity(in: view)
-            if dragVelocity.y >= 1300 {
+            if dragVelocity.y >= 200 {
                 self.dismiss(animated: true, completion: nil)
             } else {
                 // set back to original position of the view controller

@@ -906,11 +906,7 @@ class SinglePlayerViewController: UIViewController {
         resetGame()
         UserDefaults.standard.set(true, forKey: "toggleState")
         print("viewDidLoad: Hard MOde On = \(hardModeOn)")
-        if hardModeOn == false {
-            imageView.image = UIImage(named: "happyPopeye")
-        } else {
-            imageView.image = UIImage(named: "angryPopeye")
-        }
+        
         
     }
     
